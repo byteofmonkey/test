@@ -37,3 +37,38 @@ img {
     display: block;
     width: 100%;
 }
+
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    background: linear-gradient(to right, $gradientDark, $gradientLight);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.container,
+.containerFluid {
+    padding: 0 15px;
+
+    @media screen and (max-width: $tableWidth) {
+        padding: 0 5px;
+    }
+}
+
+
+section {
+    margin: 160px 0;
+
+    @media screen and (max-width: $desktopWidth) {
+        margin: 140px 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
