@@ -223,6 +223,10 @@ th {
   margin-left: -4.59375em;
   color: #f25b24; }
 
+.icon-close:before {
+  content: "\e903";
+  color: #918d9a; }
+
 html {
   line-height: 1.42;
   font-size: 16px;
@@ -317,6 +321,12 @@ button {
   transition: background-color 0.05s ease-in; }
   .button-solid:active, .button-solid:hover, .button-solid:focus {
     background-color: transparent; }
+
+input {
+  font-family: 'Whitney', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px; }
 
 h1,
 h2,
@@ -593,3 +603,55 @@ p {
       font-size: 18px; }
     .footer__button {
       width: 100%; } }
+
+/* SubBlocks */
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  background: rgba(28, 24, 47, 0.3);
+  display: none; }
+  .modal.open {
+    display: flex; }
+  .modal__wrapper {
+    width: 100%;
+    max-width: 490px;
+    padding: 65px 60px 55px;
+    border-radius: 6px;
+    background: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: column; }
+  .modal__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 42px;
+    height: 42px;
+    font-size: 40px; }
+  .modal__header {
+    text-align: center; }
+  .modal label {
+    display: block;
+    font-family: 'Whitney', sans-serif;
+    font-size: 18px;
+    font-weight: 500; }
+    .modal label:first-of-type {
+      margin-top: 30px; }
+    .modal label:nth-of-type(2) {
+      margin-top: 15px; }
+  .modal input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 17px 16px 17px 12px;
+    background: #FFFFFF;
+    border: 1px solid #DDDAE7;
+    border-radius: 4px; }
+  .modal__submit {
+    margin-top: 34px;
+    width: 100%; }
