@@ -1,7 +1,7 @@
 html {
     line-height: $mainLineHeight;
     font-size: $mainFontSize;
-    color: $defaultColor;
+    color: $blackColor;
 }
 
 body {
@@ -41,9 +41,9 @@ img {
 main {
     max-width: 1920px;
     margin: 0 auto;
-    overflow: hidden;
 
-    background: linear-gradient(to right, $gradientDark, $gradientLight);
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
@@ -62,13 +62,65 @@ main {
 
 
 section {
-    margin: 160px 0;
+    margin: 100px 0;
 
     @media screen and (max-width: $desktopWidth) {
-        margin: 140px 0;
+        // margin: 140px 0;
     }
 }
 
-a {
+a,
+button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     text-decoration: none;
+    font-family: 'Whitney', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $defaultColor;
+
+    background-color: transparent;
+    cursor: pointer;
+
+    transition: color 0.05s ease-in;
+
+
+    &:focus,
+    &:active,
+    &:hover {
+        color: $accentColor;
+
+        &::before {
+            color: $accentColor;
+        }
+    }
+}
+
+.button-solid {
+    width: 222px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $accentColor;
+
+    border: 1px solid $accentColor;
+    border-radius: 4px;
+
+    font-family: 'Whitney', sans-serif;
+    font-size: 18px;
+    color: $defaultColor;
+    font-weight: 600;
+    transition: background-color 0.05s ease-in;
+
+    &:active,
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
 }

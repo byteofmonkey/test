@@ -1,1 +1,28 @@
-// .intro {}
+.intro {
+    background: linear-gradient(to right, $gradientDark, $gradientLight);
+    height: 700px;
+    margin-top: 0;
+
+    .container {
+        display: grid;
+        grid-template: auto / auto 1fr;
+    }
+
+    &__title {
+        padding-top: 200px;
+        max-width: 550px;
+    }
+
+    &__paragraph {
+        margin-top: 30px;
+        max-width: 370px;
+    }
+
+    &__button {
+        margin-top: 50px;
+    }
+
+    &__image {
+        width: 500px;
+    }
+}

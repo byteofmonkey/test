@@ -157,39 +157,39 @@ th {
   text-align: left; }
 
 @font-face {
-  font-family: 'Whitney Book';
+  font-family: 'Whitney';
   font-weight: normal;
   font-style: normal;
-  src: url("Whitney-Book.eot");
-  src: local("Whitney Book Regular"), local("Whitney-Book"), url("Whitney-Book.eot?#iefix") format("embedded-opentype"), url("Whitney-Book.woff") format("woff"), url("Whitney-Book.ttf") format("truetype"); }
+  src: url("../fonts/whitney/Whitney-Book.eot");
+  src: local("Whitney Book Regular"), local("Whitney-Book"), url("../fonts/whitney/Whitney-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/whitney/Whitney-Book.woff") format("woff"), url("../fonts/whitney/Whitney-Book.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Whitney';
   font-weight: 500;
   font-style: normal;
-  src: url("Whitney-Medium.eot");
-  src: local("Whitney Medium Regular"), local("Whitney-Medium"), url("Whitney-Medium.eot?#iefix") format("embedded-opentype"), url("Whitney-Medium.woff") format("woff"), url("Whitney-Medium.ttf") format("truetype"); }
+  src: url("../fonts/whitney/Whitney-Medium.eot");
+  src: local("Whitney Medium Regular"), local("Whitney-Medium"), url("../fonts/whitney/Whitney-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/whitney/Whitney-Medium.woff") format("woff"), url("../fonts/whitney/Whitney-Medium.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Whitney';
   font-weight: 600;
   font-style: normal;
-  src: url("Whitney-Semibold.eot");
-  src: local("Whitney Semibold Regular"), local("Whitney-Semibold"), url("Whitney-Semibold.eot?#iefix") format("embedded-opentype"), url("Whitney-Semibold.woff") format("woff"), url("Whitney-Semibold.ttf") format("truetype"); }
+  src: url("../fonts/whitney/Whitney-Semibold.eot");
+  src: local("Whitney Semibold Regular"), local("Whitney-Semibold"), url("../fonts/whitney/Whitney-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/whitney/Whitney-Semibold.woff") format("woff"), url("../fonts/whitney/Whitney-Semibold.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Segoe UI';
   font-weight: normal;
   font-style: normal;
-  src: url("SegoeUI.eot");
-  src: local("Segoe UI"), local("SegoeUI"), url("SegoeUI.eot?#iefix") format("embedded-opentype"), url("SegoeUI.woff") format("woff"), url("SegoeUI.ttf") format("truetype"); }
+  src: url("../fonts/segoi_ui/SegoeUI.eot");
+  src: local("Segoe UI"), local("SegoeUI"), url("../fonts/segoi_ui/SegoeUI.eot?#iefix") format("embedded-opentype"), url("../fonts/segoi_ui/SegoeUI.woff") format("woff"), url("../fonts/segoi_ui/SegoeUI.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Segoe UI';
   font-weight: 600;
   font-style: normal;
-  src: url("SegoeUI-SemiBold.eot");
-  src: local("Segoe UI Semibold"), local("SegoeUI-SemiBold"), url("SegoeUI-SemiBold.eot?#iefix") format("embedded-opentype"), url("SegoeUI-SemiBold.woff") format("woff"), url("SegoeUI-SemiBold.ttf") format("truetype"); }
+  src: url("../fonts/segoi_ui/SegoeUI-SemiBold.eot");
+  src: local("Segoe UI Semibold"), local("SegoeUI-SemiBold"), url("../fonts/segoi_ui/SegoeUI-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/segoi_ui/SegoeUI-SemiBold.woff") format("woff"), url("../fonts/segoi_ui/SegoeUI-SemiBold.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'icomoon';
@@ -199,8 +199,8 @@ th {
   font-style: normal;
   font-display: block; }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
   font-family: 'icomoon' !important;
   font-style: normal;
   font-weight: normal;
@@ -226,7 +226,7 @@ th {
 html {
   line-height: 1.42;
   font-size: 16px;
-  color: #FFFFFF; }
+  color: #2E2D35; }
 
 body {
   margin: 0;
@@ -257,7 +257,7 @@ main {
   max-width: 1920px;
   margin: 0 auto;
   overflow: hidden;
-  background: linear-gradient(to right, #2D1686, #4E33B5); }
+  position: relative; }
 
 .container {
   margin: 0 auto;
@@ -272,13 +272,49 @@ main {
       padding: 0 5px; } }
 
 section {
-  margin: 160px 0; }
-  @media screen and (max-width: 1280px) {
-    section {
-      margin: 140px 0; } }
+  margin: 100px 0; }
 
-a {
-  text-decoration: none; }
+a,
+button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Whitney', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.05s ease-in; }
+  a:focus, a:active, a:hover,
+  button:focus,
+  button:active,
+  button:hover {
+    color: #F25B24; }
+    a:focus::before, a:active::before, a:hover::before,
+    button:focus::before,
+    button:active::before,
+    button:hover::before {
+      color: #F25B24; }
+
+.button-solid {
+  width: 222px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F25B24;
+  border: 1px solid #F25B24;
+  border-radius: 4px;
+  font-family: 'Whitney', sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: background-color 0.05s ease-in; }
+  .button-solid:active, .button-solid:hover, .button-solid:focus {
+    background-color: transparent; }
 
 h1,
 h2,
@@ -296,14 +332,14 @@ h2 {
   font-family: 'Whitney', sans-serif;
   font-size: 40px;
   color: #2E2D35;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 120%; }
 
 h3 {
   font-family: 'Segoe UI', sans-serif;
   font-size: 22px;
   color: #2E2D35;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 29px; }
 
 p {
@@ -316,8 +352,66 @@ p {
 /* Blocks */
 .header {
   width: 100%;
-  height: 90px;
+  height: 100px;
   position: absolute;
   left: 0;
-  top: 0;
-  height: 200px; }
+  top: 0; }
+  .header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header__subMenu {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header__logo {
+    font-family: 'icomoon';
+    font-size: 32px; }
+  .header__account::before {
+    font-size: 30px;
+    margin-right: 20px; }
+
+.intro {
+  background: linear-gradient(to right, #2D1686, #4E33B5);
+  height: 700px;
+  margin-top: 0; }
+  .intro .container {
+    display: grid;
+    grid-template: auto / auto 1fr; }
+  .intro__title {
+    padding-top: 200px;
+    max-width: 550px; }
+  .intro__paragraph {
+    margin-top: 30px;
+    max-width: 370px; }
+  .intro__button {
+    margin-top: 50px; }
+  .intro__image {
+    width: 500px; }
+
+.accomplishments__title {
+  margin-bottom: 50px; }
+
+.accomplishments__cards {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr); }
+
+.accomplishments__card {
+  background-color: #F6F5F9;
+  border-radius: 6px;
+  padding: 21px 10px 21px 40px;
+  display: grid;
+  grid-template: repeat(2, auto)/repeat(2, auto); }
+
+.accomplishments__cardTitle {
+  margin-top: 20px; }
+
+.accomplishments__cardParagraph {
+  margin-top: 20px; }
+
+.accomplishments__cardImage {
+  grid-area: 1 / 2 / -1 / -1;
+  width: 193px; }

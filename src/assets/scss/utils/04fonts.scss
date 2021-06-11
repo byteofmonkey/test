@@ -1,14 +1,14 @@
 @font-face {
-    font-family: 'Whitney Book';
+    font-family: 'Whitney';
     font-weight: normal;
     font-style: normal;
 
     //--------------------------------------------------------------------- Whitney Book
-    src: url('Whitney-Book.eot');
+    src: url('../fonts/whitney/Whitney-Book.eot');
     src: local('Whitney Book Regular'), local('Whitney-Book'),
-        url('Whitney-Book.eot?#iefix') format('embedded-opentype'),
-        url('Whitney-Book.woff') format('woff'),
-        url('Whitney-Book.ttf') format('truetype');
+        url('../fonts/whitney/Whitney-Book.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/whitney/Whitney-Book.woff') format('woff'),
+        url('../fonts/whitney/Whitney-Book.ttf') format('truetype');
 }
 
 @font-face {
@@ -16,11 +16,11 @@
     font-weight: 500;
     font-style: normal;
     //--------------------------------------------------------------------- Whitney medium
-    src: url('Whitney-Medium.eot');
+    src: url('../fonts/whitney/Whitney-Medium.eot');
     src: local('Whitney Medium Regular'), local('Whitney-Medium'),
-        url('Whitney-Medium.eot?#iefix') format('embedded-opentype'),
-        url('Whitney-Medium.woff') format('woff'),
-        url('Whitney-Medium.ttf') format('truetype');
+        url('../fonts/whitney/Whitney-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/whitney/Whitney-Medium.woff') format('woff'),
+        url('../fonts/whitney/Whitney-Medium.ttf') format('truetype');
 }
 
 @font-face {
@@ -28,11 +28,11 @@
     font-weight: 600;
     font-style: normal;
     //--------------------------------------------------------------------- Whitney semi-bold
-    src: url('Whitney-Semibold.eot');
+    src: url('../fonts/whitney/Whitney-Semibold.eot');
     src: local('Whitney Semibold Regular'), local('Whitney-Semibold'),
-        url('Whitney-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('Whitney-Semibold.woff') format('woff'),
-        url('Whitney-Semibold.ttf') format('truetype');
+        url('../fonts/whitney/Whitney-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/whitney/Whitney-Semibold.woff') format('woff'),
+        url('../fonts/whitney/Whitney-Semibold.ttf') format('truetype');
 }
 
 @font-face {
@@ -40,11 +40,11 @@
     font-weight: normal;
     font-style: normal;
     //--------------------------------------------------------------------- Segoe UI regular
-    src: url('SegoeUI.eot');
+    src: url('../fonts/segoi_ui/SegoeUI.eot');
     src: local('Segoe UI'), local('SegoeUI'),
-        url('SegoeUI.eot?#iefix') format('embedded-opentype'),
-        url('SegoeUI.woff') format('woff'),
-        url('SegoeUI.ttf') format('truetype');
+        url('../fonts/segoi_ui/SegoeUI.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/segoi_ui/SegoeUI.woff') format('woff'),
+        url('../fonts/segoi_ui/SegoeUI.ttf') format('truetype');
 }
 
 @font-face {
@@ -52,11 +52,11 @@
     font-weight: 600;
     font-style: normal;
     //--------------------------------------------------------------------- Segoe UI semi-bold
-    src: url('SegoeUI-SemiBold.eot');
+    src: url('../fonts/segoi_ui/SegoeUI-SemiBold.eot');
     src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
-        url('SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('SegoeUI-SemiBold.woff') format('woff'),
-        url('SegoeUI-SemiBold.ttf') format('truetype');
+        url('../fonts/segoi_ui/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/segoi_ui/SegoeUI-SemiBold.woff') format('woff'),
+        url('../fonts/segoi_ui/SegoeUI-SemiBold.ttf') format('truetype');
 }
 
 
@@ -72,8 +72,8 @@
     font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
     font-family: 'icomoon' !important;
     //--------------------------------------------------------------------- ICO_MOON
     font-style: normal;

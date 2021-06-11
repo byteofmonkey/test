@@ -1,9 +1,40 @@
 .header {
     width: 100%;
-    height: 90px;
+    height: 100px;
+
     position: absolute;
     left: 0;
     top: 0;
 
-    height: 100px;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__subMenu {
+        height: 100%;
+        width: 300px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-family: 'icomoon';
+        font-size: 32px;
+    }
+
+
+    // &__clients {}
+
+    &__account {
+        &::before {
+            font-size: 30px;
+            margin-right: 20px;
+        }
+    }
 }
