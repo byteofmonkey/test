@@ -15,6 +15,10 @@ h1 {
         font-size: 41px;
     }
 
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 35px;
+    }
+
     @media screen and (max-width: $smPhoneWidth) {
         font-size: 30px;
     }

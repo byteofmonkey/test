@@ -268,17 +268,27 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 1260px; }
 
 .container,
 .containerFluid {
-  padding: 0 15px; }
+  padding: 0 30px; }
+  @media screen and (max-width: 640px) {
+    .container,
+    .containerFluid {
+      padding: 0 15px; } }
 
 section {
   margin: 133px 0; }
   @media screen and (max-width: 992px) {
     section {
       margin: 100px 0; } }
+
+.no-select, a,
+button, input {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent; }
 
 a,
 button {
@@ -342,6 +352,9 @@ h1 {
   @media screen and (max-width: 992px) {
     h1 {
       font-size: 41px; } }
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 35px; } }
   @media screen and (max-width: 320px) {
     h1 {
       font-size: 30px; } }
@@ -457,9 +470,9 @@ p {
         font-size: 18px; }
       .intro__button {
         margin-top: 40px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) and (orientation: portrait) {
     .intro {
-      max-height: 800px;
+      max-height: 820px;
       height: 100vh; }
       .intro .container {
         background-position: center bottom 5%;
@@ -470,16 +483,28 @@ p {
         padding-top: 150px; }
       .intro__paragraph {
         margin: 40px auto 0;
+        max-width: 300px;
         text-align: center; }
       .intro__button {
         margin: 40px auto 0; } }
   @media screen and (max-width: 480px) {
     .intro__title {
-      padding-top: 180px;
-      max-width: 280px; } }
+      padding-top: 40%;
+      max-width: 250px; } }
   @media screen and (max-width: 320px) {
     .intro__button {
       width: 100%; } }
+  @media screen and (orientation: landscape) and (max-width: 992px) {
+    .intro {
+      max-height: 600px;
+      min-height: 380px;
+      height: 100vh; }
+      .intro__title {
+        padding-top: 15%; } }
+  @media screen and (orientation: landscape) and (max-width: 640px) {
+    .intro__title {
+      font-size: 30px;
+      padding-top: 20%; } }
 
 .accomplishments__title {
   margin-bottom: 53px; }
@@ -605,7 +630,7 @@ p {
       width: 100%; } }
 
 /* SubBlocks */
-.modal {
+.modalCabinet {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -615,10 +640,16 @@ p {
   align-items: center;
   justify-content: center;
   background: rgba(28, 24, 47, 0.3);
-  display: none; }
-  .modal.open {
-    display: flex; }
-  .modal__wrapper {
+  display: none;
+  transform: scale(0); }
+  .modalCabinet.open {
+    display: flex;
+    animation: showCabinet 0.2s linear forwards; }
+
+@keyframes showCabinet {
+  to {
+    transform: scale(1); } }
+  .modalCabinet__wrapper {
     width: 100%;
     max-width: 490px;
     padding: 65px 60px 55px;
@@ -627,31 +658,69 @@ p {
     position: relative;
     display: flex;
     flex-direction: column; }
-  .modal__close {
+  .modalCabinet__close {
     position: absolute;
     right: 20px;
     top: 20px;
     width: 42px;
     height: 42px;
     font-size: 40px; }
-  .modal__header {
+  .modalCabinet__header {
     text-align: center; }
-  .modal label {
+  .modalCabinet label {
     display: block;
     font-family: 'Whitney', sans-serif;
     font-size: 18px;
     font-weight: 500; }
-    .modal label:first-of-type {
+    .modalCabinet label:first-of-type {
       margin-top: 30px; }
-    .modal label:nth-of-type(2) {
+    .modalCabinet label:nth-of-type(2) {
       margin-top: 15px; }
-  .modal input {
+  .modalCabinet input {
     width: 100%;
     margin-top: 6px;
     padding: 17px 16px 17px 12px;
     background: #FFFFFF;
     border: 1px solid #DDDAE7;
     border-radius: 4px; }
-  .modal__submit {
+  .modalCabinet__submit {
     margin-top: 34px;
     width: 100%; }
+  @media screen and (max-width: 768px) {
+    .modalCabinet__wrapper {
+      padding: 65px 40px 55px; } }
+  @media screen and (max-width: 480px) {
+    .modalCabinet__wrapper {
+      padding: 25px 20px 25px; }
+    .modalCabinet label {
+      display: block; }
+      .modalCabinet label:first-of-type {
+        margin-top: 10px; }
+      .modalCabinet label:nth-of-type(2) {
+        margin-top: 10px; }
+    .modalCabinet__submit {
+      margin-top: 10px; } }
+  @media screen and (orientation: landscape) and (max-width: 992px) {
+    .modalCabinet__wrapper {
+      height: 100vh;
+      max-height: 350px;
+      padding: 2% 20px 2%;
+      border-radius: 0;
+      align-content: center; }
+    .modalCabinet__header {
+      flex-grow: 1;
+      font-size: 28px; }
+    .modalCabinet label {
+      display: block; }
+      .modalCabinet label:first-of-type {
+        margin-top: 10px; }
+      .modalCabinet label:nth-of-type(2) {
+        margin-top: 10px; }
+    .modalCabinet__submit {
+      margin-top: 4%; } }
+  @media screen and (orientation: landscape) and (max-width: 768px) {
+    .modalCabinet__header {
+      font-size: 20px; }
+    .modalCabinet input {
+      margin-top: 3px;
+      padding: 10px; } }

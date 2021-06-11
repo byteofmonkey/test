@@ -1,4 +1,4 @@
-.modal {
+.modalCabinet {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -12,9 +12,18 @@
     background: rgba(28, 24, 47, 0.3);
 
     display: none;
+    transform: scale(0);
 
     &.open {
-        display: flex
+        display: flex;
+
+        animation: showCabinet 0.2s linear forwards;
+
+        @keyframes showCabinet {
+            to {
+                transform: scale(1);
+            }
+        }
     }
 
     &__wrapper {
@@ -72,5 +81,75 @@
     &__submit {
         margin-top: 34px;
         width: 100%;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        &__wrapper {
+            padding: 65px 40px 55px;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        &__wrapper {
+            padding: 25px 20px 25px;
+        }
+
+        label {
+            display: block;
+
+            &:first-of-type {
+                margin-top: 10px;
+            }
+
+            &:nth-of-type(2) {
+                margin-top: 10px;
+            }
+        }
+
+        &__submit {
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (max-width: $smDesktopWidth) {
+        &__wrapper {
+            height: 100vh;
+            max-height: 350px;
+            padding: 2% 20px 2%;
+            border-radius: 0;
+            align-content: center;
+        }
+
+        &__header {
+            flex-grow: 1;
+            font-size: 28px;
+        }
+
+        label {
+            display: block;
+
+            &:first-of-type {
+                margin-top: 10px;
+            }
+
+            &:nth-of-type(2) {
+                margin-top: 10px;
+            }
+        }
+
+        &__submit {
+            margin-top: 4%;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (max-width: $tableWidth) {
+        &__header {
+            font-size: 20px;
+        }
+
+        input {
+            margin-top: 3px;
+            padding: 10px;
+        }
     }
 }

@@ -62,8 +62,8 @@
 
     }
 
-    @media screen and (max-width: $tableWidth) {
-        max-height: 800px;
+    @media screen and (max-width: $tableWidth) and (orientation: portrait) {
+        max-height: 820px;
         height: 100vh;
 
         .container {
@@ -79,6 +79,7 @@
 
         &__paragraph {
             margin: 40px auto 0;
+            max-width: 300px;
             text-align: center;
         }
 
@@ -89,14 +90,31 @@
 
     @media screen and (max-width: $phoneWidth) {
         &__title {
-            padding-top: 180px;
-            max-width: 280px;
+            padding-top: 40%;
+            max-width: 250px;
         }
     }
 
     @media screen and (max-width: $smPhoneWidth) {
         &__button {
             width: 100%;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (max-width: $smDesktopWidth) {
+        max-height: 600px;
+        min-height: 380px;
+        height: 100vh;
+
+        &__title {
+            padding-top: 15%;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (max-width: $smTableWidth) {
+        &__title {
+            font-size: 30px;
+            padding-top: 20%;
         }
     }
 }

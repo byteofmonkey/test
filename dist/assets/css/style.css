@@ -320,6 +320,16 @@ section {
     }
 }
 
+.no-select, a,
+button, input {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 a,
 button {
     height: 100%;
@@ -839,16 +849,13 @@ p {
 }
 
 /* SubBlocks */
-.modal {
+.modalCabinet {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -856,14 +863,38 @@ p {
     -ms-flex-pack: center;
     justify-content: center;
     background: rgba(28, 24, 47, 0.3);
+    display: none;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
 }
 
-.modal__wrapper {
+.modalCabinet.open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: showCabinet 0.2s linear forwards;
+    animation: showCabinet 0.2s linear forwards;
+}
+
+@-webkit-keyframes showCabinet {
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes showCabinet {
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.modalCabinet__wrapper {
     width: 100%;
     max-width: 490px;
-    height: 100%;
-    max-height: 472px;
-    padding: 55px 60px 60px;
+    padding: 65px 60px 55px;
     border-radius: 6px;
     background: #FFFFFF;
     position: relative;
@@ -876,25 +907,44 @@ p {
     flex-direction: column;
 }
 
-.modal__close {
+.modalCabinet__close {
     position: absolute;
     right: 20px;
     top: 20px;
     width: 42px;
     height: 42px;
-    outline: 1px solid red;
-    font-family: icomoon;
+    font-size: 40px;
 }
 
-.modal__submit {
-    width: 100%;
+.modalCabinet__header {
+    text-align: center;
 }
 
-.modal input {
+.modalCabinet label {
+    display: block;
+    font-family: 'Whitney', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.modalCabinet label:first-of-type {
+    margin-top: 30px;
+}
+
+.modalCabinet label:nth-of-type(2) {
+    margin-top: 15px;
+}
+
+.modalCabinet input {
     width: 100%;
+    margin-top: 6px;
     padding: 17px 16px 17px 12px;
     background: #FFFFFF;
-    /* Stroke */
     border: 1px solid #DDDAE7;
     border-radius: 4px;
+}
+
+.modalCabinet__submit {
+    margin-top: 34px;
+    width: 100%;
 }
