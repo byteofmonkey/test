@@ -32,6 +32,8 @@
     }
 
     @media screen and (max-width: $desktopWidth) {
+        min-height: 600px;
+
         .container {
             background-size: 50%;
         }
@@ -44,37 +46,40 @@
             background-size: 45%;
         }
 
-        &__title {
-            padding-top: 150px;
-            max-width: 400px;
-        }
-
         &__paragraph {
             margin-top: 20px;
             max-width: 400px;
-
             font-size: 18px;
         }
 
         &__button {
-            margin-top: 40px;
+            margin-top: 30px;
         }
-
     }
 
-    @media screen and (max-width: $tableWidth) and (orientation: portrait) {
-        max-height: 820px;
+    @media screen and (max-width: $smDesktopWidth) and (orientation: landscape) {
+        max-height: 500px;
+        min-height: 375px;
         height: 100vh;
 
+        &__title {
+            padding-top: 100px;
+            font-size: 35px;
+        }
+    }
+
+    @media screen and (max-width: $smTableWidth) {
+        max-height: 825px;
+        height: 100vh;
+        background: linear-gradient(to bottom, $gradientDark, $gradientLight);
+
         .container {
-            background-position: center bottom 5%;
-            background-size: 80%;
+            background: none;
         }
 
         &__title {
             margin: 0 auto;
             text-align: center;
-            padding-top: 150px;
         }
 
         &__paragraph {
@@ -88,33 +93,31 @@
         }
     }
 
-    @media screen and (max-width: $phoneWidth) {
+    @media screen and (max-width: $smTableWidth) and (orientation: landscape) {
+        min-height: 320px;
+
         &__title {
-            padding-top: 40%;
-            max-width: 250px;
+            padding-top: 80px;
+            font-size: 30px;
+        }
+
+        &__paragraph {
+            margin: 20px auto 0;
+            max-width: 500px;
+        }
+
+        &__button {
+            margin-top: 20px;
         }
     }
 
     @media screen and (max-width: $smPhoneWidth) {
+        &__paragraph {
+            font-size: 16px;
+        }
+
         &__button {
             width: 100%;
-        }
-    }
-
-    @media screen and (orientation: landscape) and (max-width: $smDesktopWidth) {
-        max-height: 600px;
-        min-height: 380px;
-        height: 100vh;
-
-        &__title {
-            padding-top: 15%;
-        }
-    }
-
-    @media screen and (orientation: landscape) and (max-width: $smTableWidth) {
-        &__title {
-            font-size: 30px;
-            padding-top: 20%;
         }
     }
 }

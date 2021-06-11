@@ -34,13 +34,9 @@
         }
     }
 
-    @media screen and (max-width: $tableWidth) {
-        &__subMenu {
-            width: 200px;
-        }
-    }
+    @media screen and (max-width: $smDesktopWidth) {
+        height: 80px;
 
-    @media screen and (max-width: $phoneWidth) {
         &__logo {
             font-size: 22px;
         }
@@ -51,6 +47,10 @@
     }
 
     @media screen and (max-width: 360px) {
+        .container {
+            justify-content: center;
+        }
+
         &__logo {
             display: none;
         }

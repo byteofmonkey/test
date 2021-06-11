@@ -268,7 +268,7 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: 1260px; }
+  max-width: 1230px; }
 
 .container,
 .containerFluid {
@@ -351,13 +351,16 @@ h1 {
   line-height: 120%; }
   @media screen and (max-width: 992px) {
     h1 {
-      font-size: 41px; } }
-  @media screen and (max-width: 480px) {
+      font-size: 40px; } }
+  @media screen and (max-width: 768px) {
     h1 {
       font-size: 35px; } }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 480px) {
     h1 {
       font-size: 30px; } }
+  @media screen and (max-width: 320px) {
+    h1 {
+      font-size: 25px; } }
 
 h2 {
   font-family: 'Whitney', sans-serif;
@@ -419,15 +422,16 @@ p {
   .header__account::before {
     font-size: 24px;
     margin-right: 13px; }
-  @media screen and (max-width: 768px) {
-    .header__subMenu {
-      width: 200px; } }
-  @media screen and (max-width: 480px) {
-    .header__logo {
-      font-size: 22px; }
-    .header__subMenu {
-      width: 200px; } }
+  @media screen and (max-width: 992px) {
+    .header {
+      height: 80px; }
+      .header__logo {
+        font-size: 22px; }
+      .header__subMenu {
+        width: 200px; } }
   @media screen and (max-width: 360px) {
+    .header .container {
+      justify-content: center; }
     .header__logo {
       display: none; } }
 
@@ -454,57 +458,61 @@ p {
   .intro__button {
     margin-top: 60px; }
   @media screen and (max-width: 1200px) {
-    .intro .container {
-      background-size: 50%; } }
+    .intro {
+      min-height: 600px; }
+      .intro .container {
+        background-size: 50%; } }
   @media screen and (max-width: 992px) {
     .intro {
       height: 500px; }
       .intro .container {
         background-size: 45%; }
-      .intro__title {
-        padding-top: 150px;
-        max-width: 400px; }
       .intro__paragraph {
         margin-top: 20px;
         max-width: 400px;
         font-size: 18px; }
       .intro__button {
-        margin-top: 40px; } }
-  @media screen and (max-width: 768px) and (orientation: portrait) {
+        margin-top: 30px; } }
+  @media screen and (max-width: 992px) and (orientation: landscape) {
     .intro {
-      max-height: 820px;
+      max-height: 500px;
+      min-height: 375px;
       height: 100vh; }
+      .intro__title {
+        padding-top: 100px;
+        font-size: 35px; } }
+  @media screen and (max-width: 640px) {
+    .intro {
+      max-height: 825px;
+      height: 100vh;
+      background: linear-gradient(to bottom, #2D1686, #4E33B5); }
       .intro .container {
-        background-position: center bottom 5%;
-        background-size: 80%; }
+        background: none; }
       .intro__title {
         margin: 0 auto;
-        text-align: center;
-        padding-top: 150px; }
+        text-align: center; }
       .intro__paragraph {
         margin: 40px auto 0;
         max-width: 300px;
         text-align: center; }
       .intro__button {
         margin: 40px auto 0; } }
-  @media screen and (max-width: 480px) {
-    .intro__title {
-      padding-top: 40%;
-      max-width: 250px; } }
+  @media screen and (max-width: 640px) and (orientation: landscape) {
+    .intro {
+      min-height: 320px; }
+      .intro__title {
+        padding-top: 80px;
+        font-size: 30px; }
+      .intro__paragraph {
+        margin: 20px auto 0;
+        max-width: 500px; }
+      .intro__button {
+        margin-top: 20px; } }
   @media screen and (max-width: 320px) {
+    .intro__paragraph {
+      font-size: 16px; }
     .intro__button {
       width: 100%; } }
-  @media screen and (orientation: landscape) and (max-width: 992px) {
-    .intro {
-      max-height: 600px;
-      min-height: 380px;
-      height: 100vh; }
-      .intro__title {
-        padding-top: 15%; } }
-  @media screen and (orientation: landscape) and (max-width: 640px) {
-    .intro__title {
-      font-size: 30px;
-      padding-top: 20%; } }
 
 .accomplishments__title {
   margin-bottom: 53px; }
@@ -515,25 +523,28 @@ p {
   grid-gap: 30px; }
 
 .accomplishments__card {
-  background-color: #F6F5F9;
+  padding: 40px 40px 49px;
   border-radius: 6px;
-  padding: 21px 10px 21px 40px;
-  display: grid;
-  grid-template: auto 1fr / 1fr auto;
-  align-items: start; }
+  background-repeat: no-repeat;
+  background-size: 193px;
+  background-position: right 10px top 20px;
+  background-color: #F6F5F9; }
+  .accomplishments__card:nth-of-type(1) {
+    background-image: url(../images/02accomplishments/card0.svg); }
+  .accomplishments__card:nth-of-type(2) {
+    background-image: url(../images/02accomplishments/card1.svg); }
+  .accomplishments__card:nth-of-type(3) {
+    background-image: url(../images/02accomplishments/card2.svg); }
+  .accomplishments__card:nth-of-type(4) {
+    background-image: url(../images/02accomplishments/card3.svg); }
 
 .accomplishments__cardTitle {
-  max-width: 300px;
-  margin-top: 20px; }
+  max-width: 300px; }
 
 .accomplishments__cardParagraph {
   max-width: 290px;
   margin-top: 22px;
   margin-right: 10px; }
-
-.accomplishments__cardImage {
-  grid-area: 1 / 2 / -1 / -1;
-  width: 193px; }
 
 @media screen and (max-width: 1200px) {
   .accomplishments__cardImage {
@@ -542,17 +553,19 @@ p {
 
 @media screen and (max-width: 992px) {
   .accomplishments__title {
-    margin-bottom: 35px;
-    text-align: center; }
+    margin-bottom: 35px; }
   .accomplishments__cards {
-    display: grid;
-    grid-template: repeat(4, 1fr)/1fr; }
+    grid-template: repeat(4, 1fr)/1fr;
+    grid-gap: 20px; }
+  .accomplishments__card {
+    padding: 30px 40px 40px;
+    background-size: 130px;
+    background-position: right 30px top 15px; }
   .accomplishments__cardTitle {
     max-width: unset; }
   .accomplishments__cardParagraph {
-    max-width: 500px; }
-  .accomplishments__cardImage {
-    width: 193px; } }
+    max-width: 600px;
+    margin-top: 15px; } }
 
 @media screen and (max-width: 768px) {
   .accomplishments__title {

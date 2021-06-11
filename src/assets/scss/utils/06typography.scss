@@ -12,15 +12,19 @@ h1 {
     line-height: 120%;
 
     @media screen and (max-width: $smDesktopWidth) {
-        font-size: 41px;
+        font-size: 40px;
     }
 
-    @media screen and (max-width: $phoneWidth) {
+    @media screen and (max-width: $tableWidth) {
         font-size: 35px;
     }
 
-    @media screen and (max-width: $smPhoneWidth) {
+    @media screen and (max-width: $phoneWidth) {
         font-size: 30px;
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        font-size: 25px;
     }
 }
 
