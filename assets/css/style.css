@@ -302,12 +302,19 @@ main {
 
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1230px;
 }
 
 .container,
 .containerFluid {
-    padding: 0 15px;
+    padding: 0 30px;
+}
+
+@media screen and (max-width: 640px) {
+    .container,
+    .containerFluid {
+        padding: 0 15px;
+    }
 }
 
 section {
@@ -420,6 +427,12 @@ h1 {
 @media screen and (max-width: 992px) {
     h1 {
         font-size: 41px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 35px;
     }
 }
 
@@ -616,9 +629,9 @@ p {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait) {
     .intro {
-        max-height: 800px;
+        max-height: 820px;
         height: 100vh;
     }
 
@@ -635,6 +648,7 @@ p {
 
     .intro__paragraph {
         margin: 40px auto 0;
+        max-width: 300px;
         text-align: center;
     }
 
@@ -645,14 +659,33 @@ p {
 
 @media screen and (max-width: 480px) {
     .intro__title {
-        padding-top: 180px;
-        max-width: 280px;
+        padding-top: 40%;
+        max-width: 250px;
     }
 }
 
 @media screen and (max-width: 320px) {
     .intro__button {
         width: 100%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 992px) {
+    .intro {
+        max-height: 600px;
+        min-height: 380px;
+        height: 100vh;
+    }
+
+    .intro__title {
+        padding-top: 15%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 640px) {
+    .intro__title {
+        font-size: 30px;
+        padding-top: 20%;
     }
 }
 
@@ -947,4 +980,77 @@ p {
 .modalCabinet__submit {
     margin-top: 34px;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .modalCabinet__wrapper {
+        padding: 65px 40px 55px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modalCabinet__wrapper {
+        padding: 25px 20px 25px;
+    }
+
+    .modalCabinet label {
+        display: block;
+    }
+
+    .modalCabinet label:first-of-type {
+        margin-top: 10px;
+    }
+
+    .modalCabinet label:nth-of-type(2) {
+        margin-top: 10px;
+    }
+
+    .modalCabinet__submit {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 992px) {
+    .modalCabinet__wrapper {
+        height: 100vh;
+        max-height: 350px;
+        padding: 2% 20px 2%;
+        border-radius: 0;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+
+    .modalCabinet__header {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        font-size: 28px;
+    }
+
+    .modalCabinet label {
+        display: block;
+    }
+
+    .modalCabinet label:first-of-type {
+        margin-top: 10px;
+    }
+
+    .modalCabinet label:nth-of-type(2) {
+        margin-top: 10px;
+    }
+
+    .modalCabinet__submit {
+        margin-top: 4%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+    .modalCabinet__header {
+        font-size: 20px;
+    }
+
+    .modalCabinet input {
+        margin-top: 3px;
+        padding: 10px;
+    }
 }
