@@ -1,0 +1,17 @@
+/*
+/* Buttons
+====================================================================== */
+.button {
+    background: #0000;
+
+    &:focus,
+    &:active,
+    &:hover {
+        outline: none;
+    }
+}
+
+.button_red {
+    @extend .button;
+    background: linear-gradient($red, lighten($red, 5%));
+}
