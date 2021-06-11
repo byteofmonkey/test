@@ -237,6 +237,9 @@ body {
   background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  @media screen and (max-width: 320px) {
+    body {
+      font-size: 14px; } }
 
 *,
 *:before,
@@ -266,13 +269,12 @@ main {
 .container,
 .containerFluid {
   padding: 0 15px; }
-  @media screen and (max-width: 768px) {
-    .container,
-    .containerFluid {
-      padding: 0 5px; } }
 
 section {
   margin: 133px 0; }
+  @media screen and (max-width: 992px) {
+    section {
+      margin: 100px 0; } }
 
 a,
 button {
@@ -327,6 +329,12 @@ h1 {
   color: #FFFFFF;
   font-weight: 600;
   line-height: 120%; }
+  @media screen and (max-width: 992px) {
+    h1 {
+      font-size: 41px; } }
+  @media screen and (max-width: 320px) {
+    h1 {
+      font-size: 30px; } }
 
 h2 {
   font-family: 'Whitney', sans-serif;
@@ -334,6 +342,15 @@ h2 {
   color: #2E2D35;
   font-weight: 600;
   line-height: 120%; }
+  @media screen and (max-width: 992px) {
+    h2 {
+      font-size: 35px; } }
+  @media screen and (max-width: 480px) {
+    h2 {
+      font-size: 28px; } }
+  @media screen and (max-width: 320px) {
+    h2 {
+      font-size: 20px; } }
 
 h3 {
   font-family: 'Segoe UI', sans-serif;
@@ -341,6 +358,12 @@ h3 {
   color: #2E2D35;
   font-weight: 600;
   line-height: 29px; }
+  @media screen and (max-width: 992px) {
+    h3 {
+      font-size: 21px; } }
+  @media screen and (max-width: 480px) {
+    h3 {
+      font-size: 20px; } }
 
 p {
   font-family: 'Segoe UI', sans-serif;
@@ -364,7 +387,6 @@ p {
   .header__subMenu {
     height: 100%;
     width: 265px;
-    margin-right: 6px;
     display: flex;
     align-items: center;
     justify-content: space-between; }
@@ -374,6 +396,17 @@ p {
   .header__account::before {
     font-size: 24px;
     margin-right: 13px; }
+  @media screen and (max-width: 768px) {
+    .header__subMenu {
+      width: 200px; } }
+  @media screen and (max-width: 480px) {
+    .header__logo {
+      font-size: 22px; }
+    .header__subMenu {
+      width: 200px; } }
+  @media screen and (max-width: 360px) {
+    .header__logo {
+      display: none; } }
 
 .intro {
   background: linear-gradient(to right, #2D1686, #4E33B5);
@@ -397,8 +430,46 @@ p {
     line-height: 1.3; }
   .intro__button {
     margin-top: 60px; }
-  .intro__image {
-    width: 500px; }
+  @media screen and (max-width: 1200px) {
+    .intro .container {
+      background-size: 50%; } }
+  @media screen and (max-width: 992px) {
+    .intro {
+      height: 500px; }
+      .intro .container {
+        background-size: 45%; }
+      .intro__title {
+        padding-top: 150px;
+        max-width: 400px; }
+      .intro__paragraph {
+        margin-top: 20px;
+        max-width: 400px;
+        font-size: 18px; }
+      .intro__button {
+        margin-top: 40px; } }
+  @media screen and (max-width: 768px) {
+    .intro {
+      max-height: 800px;
+      height: 100vh; }
+      .intro .container {
+        background-position: center bottom 5%;
+        background-size: 80%; }
+      .intro__title {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 150px; }
+      .intro__paragraph {
+        margin: 40px auto 0;
+        text-align: center; }
+      .intro__button {
+        margin: 40px auto 0; } }
+  @media screen and (max-width: 480px) {
+    .intro__title {
+      padding-top: 180px;
+      max-width: 280px; } }
+  @media screen and (max-width: 320px) {
+    .intro__button {
+      width: 100%; } }
 
 .accomplishments__title {
   margin-bottom: 53px; }
@@ -417,15 +488,70 @@ p {
   align-items: start; }
 
 .accomplishments__cardTitle {
+  max-width: 300px;
   margin-top: 20px; }
 
 .accomplishments__cardParagraph {
+  max-width: 290px;
   margin-top: 22px;
-  margin-right: 35px; }
+  margin-right: 10px; }
 
 .accomplishments__cardImage {
   grid-area: 1 / 2 / -1 / -1;
   width: 193px; }
+
+@media screen and (max-width: 1200px) {
+  .accomplishments__cardImage {
+    align-self: center;
+    width: 125px; } }
+
+@media screen and (max-width: 992px) {
+  .accomplishments__title {
+    margin-bottom: 35px;
+    text-align: center; }
+  .accomplishments__cards {
+    display: grid;
+    grid-template: repeat(4, 1fr)/1fr; }
+  .accomplishments__cardTitle {
+    max-width: unset; }
+  .accomplishments__cardParagraph {
+    max-width: 500px; }
+  .accomplishments__cardImage {
+    width: 193px; } }
+
+@media screen and (max-width: 768px) {
+  .accomplishments__title {
+    margin: 0 auto 35px;
+    max-width: 500px; }
+    .accomplishments__title span {
+      display: none; }
+  .accomplishments__card {
+    padding: 15px 10px 15px 30px; }
+  .accomplishments__cardImage {
+    width: 140px; } }
+
+@media screen and (max-width: 640px) {
+  .accomplishments__cardTitle {
+    max-width: unset;
+    margin-top: unset;
+    align-self: center; }
+  .accomplishments__cardImage {
+    grid-area: 1 / 2 / 2 / -1;
+    width: 100px; }
+  .accomplishments__cardParagraph {
+    grid-area: 2 / 1 / -1 / -1;
+    max-width: unset; } }
+
+@media screen and (max-width: 480px) {
+  .accomplishments__card {
+    padding: 15px 10px 15px 20px; }
+  .accomplishments__cardTitle {
+    grid-area: 1 / 1 / 2 / -1; }
+  .accomplishments__cardImage {
+    grid-area: 1 / 2 / -1 / -1;
+    opacity: 0.2;
+    width: auto;
+    height: 140px; } }
 
 .footer {
   margin-top: -5px; }
@@ -444,3 +570,26 @@ p {
     color: #FFFFFF; }
   .footer__button {
     margin-top: 45px; }
+  @media screen and (max-width: 768px) {
+    .footer__wrapper {
+      padding: 50px; }
+    .footer__paragraph {
+      max-width: 500px;
+      font-size: 28px; } }
+  @media screen and (max-width: 640px) {
+    .footer__wrapper {
+      padding: 30px; }
+    .footer__paragraph {
+      max-width: 300px;
+      font-size: 25px; } }
+  @media screen and (max-width: 480px) {
+    .footer__paragraph {
+      max-width: 250px;
+      font-size: 20px; } }
+  @media screen and (max-width: 320px) {
+    .footer__paragraph {
+      max-width: unset;
+      font-weight: 400;
+      font-size: 18px; }
+    .footer__button {
+      width: 100%; } }

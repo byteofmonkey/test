@@ -307,7 +307,7 @@ main {
 }
 
 section {
-    margin: 135px 0;
+    margin: 133px 0;
 }
 
 a,
@@ -411,7 +411,7 @@ p {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 142%;
+    line-height: 148%;
 }
 
 /* Blocks */
@@ -439,7 +439,6 @@ p {
 .header__subMenu {
     height: 100%;
     width: 265px;
-    margin-right: 6px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -500,12 +499,13 @@ p {
 }
 
 .accomplishments__title {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
 }
 
 .accomplishments__cards {
     display: grid;
     grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+    grid-gap: 30px;
 }
 
 .accomplishments__card {
@@ -513,7 +513,10 @@ p {
     border-radius: 6px;
     padding: 21px 10px 21px 40px;
     display: grid;
-    grid-template: repeat(2, auto)/repeat(2, auto);
+    grid-template: auto 1fr / 1fr auto;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
 }
 
 .accomplishments__cardTitle {
@@ -521,12 +524,17 @@ p {
 }
 
 .accomplishments__cardParagraph {
-    margin-top: 20px;
+    margin-top: 22px;
+    margin-right: 35px;
 }
 
 .accomplishments__cardImage {
     grid-area: 1 / 2 / -1 / -1;
     width: 193px;
+}
+
+.footer {
+    margin-top: -5px;
 }
 
 .footer__wrapper {
@@ -535,19 +543,19 @@ p {
     background: no-repeat url(../images/03footer/footer.png), -webkit-gradient(linear, left top, right top, from(#2D1686), to(#4E33B5));
     background: no-repeat url(../images/03footer/footer.png), -o-linear-gradient(left, #2D1686, #4E33B5);
     background: no-repeat url(../images/03footer/footer.png), linear-gradient(to right, #2D1686, #4E33B5);
-    background-size: 50%, 100%;
-    background-position: right center;
+    background-size: 62.5%, 100%;
+    background-position: right top 55%;
 }
 
 .footer__paragraph {
-    max-width: 650px;
+    max-width: 555px;
     font-family: 'Whitney', sans-serif;
     font-size: 34px;
     font-weight: 600;
-    line-height: 1;
+    line-height: 1.35;
     color: #FFFFFF;
 }
 
 .footer__button {
-    margin-top: 50px;
+    margin-top: 45px;
 }

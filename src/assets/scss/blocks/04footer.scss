@@ -24,4 +24,46 @@
     &__button {
         margin-top: 45px;
     }
+
+    @media screen and (max-width: $tableWidth) {
+        &__wrapper {
+            padding: 50px;
+        }
+
+        &__paragraph {
+            max-width: 500px;
+
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width: $smTableWidth) {
+        &__wrapper {
+            padding: 30px;
+        }
+
+        &__paragraph {
+            max-width: 300px;
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        &__paragraph {
+            max-width: 250px;
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        &__paragraph {
+            max-width: unset;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
 }

@@ -31,7 +31,72 @@
         margin-top: 60px;
     }
 
-    &__image {
-        width: 500px;
+    @media screen and (max-width: $desktopWidth) {
+        .container {
+            background-size: 50%;
+        }
+    }
+
+    @media screen and (max-width: $smDesktopWidth) {
+        height: 500px;
+
+        .container {
+            background-size: 45%;
+        }
+
+        &__title {
+            padding-top: 150px;
+            max-width: 400px;
+        }
+
+        &__paragraph {
+            margin-top: 20px;
+            max-width: 400px;
+
+            font-size: 18px;
+        }
+
+        &__button {
+            margin-top: 40px;
+        }
+
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        max-height: 800px;
+        height: 100vh;
+
+        .container {
+            background-position: center bottom 5%;
+            background-size: 80%;
+        }
+
+        &__title {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        &__paragraph {
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        &__button {
+            margin: 40px auto 0;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        &__title {
+            padding-top: 180px;
+            max-width: 280px;
+        }
+    }
+
+    @media screen and (max-width: $smPhoneWidth) {
+        &__button {
+            width: 100%;
+        }
     }
 }

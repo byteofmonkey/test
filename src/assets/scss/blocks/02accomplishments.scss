@@ -22,16 +22,103 @@
     }
 
     &__cardTitle {
+        max-width: 300px;
         margin-top: 20px;
     }
 
     &__cardParagraph {
+        max-width: 290px;
         margin-top: 22px;
-        margin-right: 35px;
+        margin-right: 10px;
     }
 
     &__cardImage {
         grid-area: 1 / 2 / -1 / -1;
         width: 193px;
+    }
+
+    @media screen and (max-width: $desktopWidth) {
+        &__cardImage {
+            align-self: center;
+            width: 125px;
+        }
+    }
+
+    @media screen and (max-width: $smDesktopWidth) {
+        &__title {
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template: repeat(4, 1fr) /1fr;
+        }
+
+        &__cardTitle {
+            max-width: unset;
+        }
+
+        &__cardParagraph {
+            max-width: 500px;
+        }
+
+        &__cardImage {
+            width: 193px;
+        }
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        &__title {
+            margin: 0 auto 35px;
+            max-width: 500px;
+
+            span {
+                display: none;
+            }
+        }
+
+        &__card {
+            padding: 15px 10px 15px 30px;
+        }
+
+        &__cardImage {
+            width: 140px;
+        }
+    }
+
+    @media screen and (max-width: $smTableWidth) {
+        &__cardTitle {
+            max-width: unset;
+            margin-top: unset;
+            align-self: center;
+        }
+
+        &__cardImage {
+            grid-area: 1 / 2 / 2 / -1;
+            width: 100px;
+        }
+
+        &__cardParagraph {
+            grid-area: 2 / 1 / -1 / -1;
+            max-width: unset;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        &__card {
+            padding: 15px 10px 15px 20px;
+        }
+
+        &__cardTitle {
+            grid-area: 1 / 1 / 2 / -1;
+        }
+
+        &__cardImage {
+            grid-area: 1 / 2 / -1 / -1;
+            opacity: 0.2;
+            width: auto;
+            height: 140px;
+        }
     }
 }

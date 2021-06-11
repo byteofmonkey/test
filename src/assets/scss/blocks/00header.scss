@@ -16,7 +16,6 @@
     &__subMenu {
         height: 100%;
         width: 265px;
-        margin-right: 6px;
 
         display: flex;
         align-items: center;
@@ -32,6 +31,28 @@
         &::before {
             font-size: 24px;
             margin-right: 13px;
+        }
+    }
+
+    @media screen and (max-width: $tableWidth) {
+        &__subMenu {
+            width: 200px;
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+        &__logo {
+            font-size: 22px;
+        }
+
+        &__subMenu {
+            width: 200px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__logo {
+            display: none;
         }
     }
 }

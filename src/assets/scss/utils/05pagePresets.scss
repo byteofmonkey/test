@@ -15,9 +15,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    // @media screen and (max-width: $desktopWidth) {
-    //     font-size: 14px;
-    // }
+    @media screen and (max-width: $smPhoneWidth) {
+        font-size: 14px;
+    }
 }
 
 *,
@@ -54,18 +54,14 @@ main {
 .container,
 .containerFluid {
     padding: 0 15px;
-
-    @media screen and (max-width: $tableWidth) {
-        padding: 0 5px;
-    }
 }
 
 
 section {
     margin: 133px 0;
 
-    @media screen and (max-width: $desktopWidth) {
-        // margin: 140px 0;
+    @media screen and (max-width: $smDesktopWidth) {
+        margin: 100px 0;
     }
 }
 
