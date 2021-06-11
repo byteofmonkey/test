@@ -6,7 +6,6 @@
     left: 0;
     top: 0;
 
-
     .container {
         height: 100%;
         display: flex;
@@ -16,7 +15,8 @@
 
     &__subMenu {
         height: 100%;
-        width: 300px;
+        width: 265px;
+        margin-right: 6px;
 
         display: flex;
         align-items: center;
@@ -28,13 +28,10 @@
         font-size: 32px;
     }
 
-
-    // &__clients {}
-
     &__account {
         &::before {
-            font-size: 30px;
-            margin-right: 20px;
+            font-size: 24px;
+            margin-right: 13px;
         }
     }
 }

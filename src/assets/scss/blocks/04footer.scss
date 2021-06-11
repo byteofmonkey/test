@@ -1,1 +1,27 @@
-// .footer {}
+.footer {
+    margin-top: -5px;
+
+    &__wrapper {
+        padding: 70px;
+        border-radius: 10px;
+        background: no-repeat url(../images/03footer/footer.png), linear-gradient(to right, $gradientDark, $gradientLight);
+
+        background-size: 62.5%, 100%;
+        background-position: right top 55%;
+
+    }
+
+    &__paragraph {
+        max-width: 555px;
+
+        font-family: 'Whitney', sans-serif;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 1.35;
+        color: $defaultColor;
+    }
+
+    &__button {
+        margin-top: 45px;
+    }
+}

@@ -272,7 +272,7 @@ main {
       padding: 0 5px; } }
 
 section {
-  margin: 100px 0; }
+  margin: 133px 0; }
 
 a,
 button {
@@ -347,7 +347,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 142%; }
+  line-height: 148%; }
 
 /* Blocks */
 .header {
@@ -363,7 +363,8 @@ p {
     align-items: center; }
   .header__subMenu {
     height: 100%;
-    width: 300px;
+    width: 265px;
+    margin-right: 6px;
     display: flex;
     align-items: center;
     justify-content: space-between; }
@@ -371,47 +372,75 @@ p {
     font-family: 'icomoon';
     font-size: 32px; }
   .header__account::before {
-    font-size: 30px;
-    margin-right: 20px; }
+    font-size: 24px;
+    margin-right: 13px; }
 
 .intro {
   background: linear-gradient(to right, #2D1686, #4E33B5);
   height: 700px;
   margin-top: 0; }
   .intro .container {
-    display: grid;
-    grid-template: auto / auto 1fr; }
+    height: 100%;
+    background: no-repeat url(../images/01intro/intro.svg);
+    background-position: right 1% top 60%;
+    background-size: 57.5%; }
   .intro__title {
     padding-top: 200px;
-    max-width: 550px; }
+    max-width: 520px; }
   .intro__paragraph {
     margin-top: 30px;
-    max-width: 370px; }
+    max-width: 530px;
+    font-family: 'Whitney', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 500;
+    line-height: 1.3; }
   .intro__button {
-    margin-top: 50px; }
+    margin-top: 60px; }
   .intro__image {
     width: 500px; }
 
 .accomplishments__title {
-  margin-bottom: 50px; }
+  margin-bottom: 53px; }
 
 .accomplishments__cards {
   display: grid;
-  grid-template: repeat(2, 1fr)/repeat(2, 1fr); }
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  grid-gap: 30px; }
 
 .accomplishments__card {
   background-color: #F6F5F9;
   border-radius: 6px;
   padding: 21px 10px 21px 40px;
   display: grid;
-  grid-template: repeat(2, auto)/repeat(2, auto); }
+  grid-template: auto 1fr / 1fr auto;
+  align-items: start; }
 
 .accomplishments__cardTitle {
   margin-top: 20px; }
 
 .accomplishments__cardParagraph {
-  margin-top: 20px; }
+  margin-top: 22px;
+  margin-right: 35px; }
 
 .accomplishments__cardImage {
   grid-area: 1 / 2 / -1 / -1;
   width: 193px; }
+
+.footer {
+  margin-top: -5px; }
+  .footer__wrapper {
+    padding: 70px;
+    border-radius: 10px;
+    background: no-repeat url(../images/03footer/footer.png), linear-gradient(to right, #2D1686, #4E33B5);
+    background-size: 62.5%, 100%;
+    background-position: right top 55%; }
+  .footer__paragraph {
+    max-width: 555px;
+    font-family: 'Whitney', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #FFFFFF; }
+  .footer__button {
+    margin-top: 45px; }

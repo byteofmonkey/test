@@ -4,22 +4,31 @@
     margin-top: 0;
 
     .container {
-        display: grid;
-        grid-template: auto / auto 1fr;
+        height: 100%;
+
+        background: no-repeat url(../images/01intro/intro.svg);
+        background-position: right 1% top 60%;
+        background-size: 57.5%;
     }
 
     &__title {
         padding-top: 200px;
-        max-width: 550px;
+        max-width: 520px;
     }
 
     &__paragraph {
         margin-top: 30px;
-        max-width: 370px;
+        max-width: 530px;
+
+        font-family: 'Whitney', sans-serif;
+        font-size: 24px;
+        color: $defaultColor;
+        font-weight: 500;
+        line-height: 1.3;
     }
 
     &__button {
-        margin-top: 50px;
+        margin-top: 60px;
     }
 
     &__image {

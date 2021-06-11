@@ -170,7 +170,7 @@ th {
 }
 
 @font-face {
-    font-family: 'Whitney Book';
+    font-family: 'Whitney';
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/whitney/Whitney-Book.eot");
@@ -218,8 +218,8 @@ th {
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
     font-family: 'icomoon' !important;
     font-style: normal;
     font-weight: normal;
@@ -249,7 +249,7 @@ th {
 html {
     line-height: 1.42;
     font-size: 16px;
-    color: #FFFFFF;
+    color: #2E2D35;
 }
 
 body {
@@ -306,9 +306,46 @@ main {
     }
 }
 
-a {
-    text-decoration: none;
+section {
+    margin: 135px 0;
+}
+
+a,
+button {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Whitney', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: color 0.05s ease-in;
+    -o-transition: color 0.05s ease-in;
+    transition: color 0.05s ease-in;
+}
+
+a:focus, a:active, a:hover,
+  button:focus,
+  button:active,
+  button:hover {
+    color: #F25B24;
+}
+
+a:focus::before, a:active::before, a:hover::before,
+    button:focus::before,
+    button:active::before,
+    button:hover::before {
+    color: #F25B24;
 }
 
 .button-solid {
@@ -357,7 +394,7 @@ h2 {
     font-family: 'Whitney', sans-serif;
     font-size: 40px;
     color: #2E2D35;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 120%;
 }
 
@@ -365,7 +402,7 @@ h3 {
     font-family: 'Segoe UI', sans-serif;
     font-size: 22px;
     color: #2E2D35;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 29px;
 }
 
@@ -386,13 +423,131 @@ p {
     top: 0;
 }
 
+.header .container {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.header__subMenu {
+    height: 100%;
+    width: 265px;
+    margin-right: 6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-family: 'icomoon';
+    font-size: 32px;
+}
+
+.header__account::before {
+    font-size: 24px;
+    margin-right: 13px;
+}
+
 .intro {
     background: -webkit-gradient(linear, left top, right top, from(#2D1686), to(#4E33B5));
     background: -o-linear-gradient(left, #2D1686, #4E33B5);
     background: linear-gradient(to right, #2D1686, #4E33B5);
+    height: 700px;
+    margin-top: 0;
+}
+
+.intro .container {
+    height: 100%;
+    background: no-repeat url(../images/01intro/intro.svg);
+    background-position: right 1% top 60%;
+    background-size: 57.5%;
 }
 
 .intro__title {
     padding-top: 200px;
-    max-width: 550px;
+    max-width: 520px;
+}
+
+.intro__paragraph {
+    margin-top: 30px;
+    max-width: 530px;
+    font-family: 'Whitney', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.intro__button {
+    margin-top: 60px;
+}
+
+.intro__image {
+    width: 500px;
+}
+
+.accomplishments__title {
+    margin-bottom: 50px;
+}
+
+.accomplishments__cards {
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+}
+
+.accomplishments__card {
+    background-color: #F6F5F9;
+    border-radius: 6px;
+    padding: 21px 10px 21px 40px;
+    display: grid;
+    grid-template: repeat(2, auto)/repeat(2, auto);
+}
+
+.accomplishments__cardTitle {
+    margin-top: 20px;
+}
+
+.accomplishments__cardParagraph {
+    margin-top: 20px;
+}
+
+.accomplishments__cardImage {
+    grid-area: 1 / 2 / -1 / -1;
+    width: 193px;
+}
+
+.footer__wrapper {
+    padding: 70px;
+    border-radius: 10px;
+    background: no-repeat url(../images/03footer/footer.png), -webkit-gradient(linear, left top, right top, from(#2D1686), to(#4E33B5));
+    background: no-repeat url(../images/03footer/footer.png), -o-linear-gradient(left, #2D1686, #4E33B5);
+    background: no-repeat url(../images/03footer/footer.png), linear-gradient(to right, #2D1686, #4E33B5);
+    background-size: 50%, 100%;
+    background-position: right center;
+}
+
+.footer__paragraph {
+    max-width: 650px;
+    font-family: 'Whitney', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.footer__button {
+    margin-top: 50px;
 }
